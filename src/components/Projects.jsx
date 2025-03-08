@@ -63,13 +63,13 @@ function Projects() {
                             <p>{mensaje}</p>
                         </div>
                         <picture className="projects__preview-gallery">
-                            <img src="src/assets/sibcmg_1.png" alt="" />
+                            <img src="/public/images/sibcmg_1.png" alt="" />
 
-                            <img src="src/assets/sibcmg_2.png" alt="" />
+                            <img src="public/images/sibcmg_2.png" alt="" />
 
-                            <img src="src/assets/sibcmg_3.png" alt="" />
+                            <img src="public/images/sibcmg_3.png" alt="" />
 
-                            <img src="src/assets/sibcmg_4.png" alt="" />
+                            <img src="public/images/sibcmg_4.png" alt="" />
                         </picture>
                         <div className="projects__preview-div">
                             <a href="" className="projects__preview-button">Iniciar</a>
