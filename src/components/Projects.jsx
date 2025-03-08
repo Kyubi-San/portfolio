@@ -36,7 +36,7 @@ function Projects() {
                     <div className={`projects__gallery-item ${projectClicked === 2 ? 'projects__gallery-item--clicked' : ''}`}>
                         <span className={`projects__gallery-name ${projectClicked === 1 && 'visible'}`}>GameTaTe React</span>
                         <span className={`projects__gallery-name ${projectClicked === 3 && 'visible'}`}>GameTaTe PHP</span>
-                        <img src="src/assets/logo-sistema.png" alt="" className="projects__gallery-item-img" onClick={() => handleProject(2)}/>
+                        <img src="https://github.com/Kyubi-San/portfolio/blob/main/public/images/logo-sistema.png?raw=true" alt="" className="projects__gallery-item-img" onClick={() => handleProject(2)}/>
                     </div>
                     <div className={`projects__gallery-item ${projectClicked === 3 ? 'projects__gallery-item--clicked' : ''}`}>
                         <span className={`projects__gallery-name ${projectClicked === 2 && 'visible'}`}>Sistema gestion - solicitud de bienes</span>
