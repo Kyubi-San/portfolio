@@ -9,10 +9,12 @@ function App() {
   return (
     <>
       <Header/>
-      <AboutMe/>
-      <Projects/>
-      <Skills/>
-      <Footer/>
+      <main className='main'>
+        <AboutMe/>
+        <Projects/>
+        <Skills/>
+      </main>
+        <Footer/>
     </>
   )
 }

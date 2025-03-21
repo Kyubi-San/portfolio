@@ -18,11 +18,19 @@
   text-decoration: none;
 }
 
-body {
-  padding: 0;
+body, html {
   margin: 0;
+  padding: 0;
   font-size: 16px;
-  background: black;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .nav {
@@ -55,12 +63,12 @@ body {
   display: flex;
   height: 100vh;
   position: relative;
+  scroll-snap-align: start;
 }
 
 .about-me__background {
-  width: 100%;
+  width: 50%;
   height: 100%;
-  position: absolute;
   z-index: 0;
 }
 
@@ -83,15 +91,78 @@ body {
   font-size: 1rem;
 }
 
+.about-me__social {
+  display: flex;
+  gap: 1em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1em;
+  align-items: center;
+}
+
+.scroll-arrow {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 1;
+  background: #6c5ce7;
+  border-radius: 50%;
+  margin: 1em 0;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  font-size: 1.2em;
+  border: 1px solid #2d3436;
+}
+
+.scroll-arrow i {
+  transition: .3s all;
+  z-index: 10;
+}
+
+.scroll-arrow:hover i {
+  transform: translateY(1em);
+}
+
+.scroll-arrow::before {
+  position: absolute;
+  content: 'Scroll down';
+  font-size: 10px;
+  z-index: 1;
+  opacity: 0;
+  font-weight: bold;
+}
+
+.scroll-arrow:hover::before {
+  opacity: 1;
+}
+
+.scroll-arrow::after {
+  position: absolute;
+  align-self: flex-end;
+  content: '↓';
+  z-index: 1;
+}
+
+/* Proyectos */
+
 .projects {
   height: calc(100vh - 2em);
   padding: 1em;
   background: #080c25;
+  background: url(https://wallpapers.com/images/hd/fantasy-night-forest-2hiwzz2egmpkh221.webp);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   padding: 1em;
+  scroll-snap-align: start;
 }
 
 .projects__gallery {
@@ -109,6 +180,8 @@ body {
   overflow: hidden;
   height: 60%;
   transition: all .3s;
+  background: white;
+
 }
 
 .projects__gallery-item--clicked {
@@ -258,6 +331,15 @@ body {
   font-size: 35px;
   color: #6c5ce7;
   margin-bottom: 5px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #080c25;
+  color: white;
+  scroll-snap-align: start;
 }
 
 @media (max-width: 900px) {

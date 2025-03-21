@@ -8,8 +8,14 @@ function AboutMe() {
                     <h3>Desarrollador FullStack</h3>
                     <p>Soy un programador junior apasionado por los videojuegos y el desarrollo de software. Me encanta resolver problemas y aprender nuevas herramientas para mejorar la calidad de los proyectos en los que participo.</p>
                 </div>
-                <div>
+                <div className="about-me__social">
                     Mis redes sociales
+                    <i className="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div className="scroll-arrow">
+                    <i class="fa-solid fa-computer-mouse"></i>
                 </div>
             </section>
         </>
